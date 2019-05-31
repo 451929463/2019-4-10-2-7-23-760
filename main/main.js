@@ -16,10 +16,12 @@ module.exports = function main(inputs) {
 };
 
 function calculatePriceBeyondInitDistance(distance) {
-	if(distance <= INIT_DISTANCE)
+	if(distance <= INIT_DISTANCE){
 		return 0;
+	}
+	
 	if(distance <= NORMAL_DISTANCE) {
-	 return (distance - INIT_DISTANCE) * DISTANCE_UNIT_PRICE;
+		return (distance - INIT_DISTANCE) * DISTANCE_UNIT_PRICE;
     }
 	return calculatePriceBeyondNormalDistance(distance);	
 }
